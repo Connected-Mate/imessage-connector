@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How it works, limits, FAQ — iMessage Connector</title>
+<meta name="description" content="How iMessage Connector works: setup with your coding agent, the settings page, what it cannot do, the safety rules, and answers to common questions.">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://connected-mate.github.io/imessage-connector/more.html">
+<link rel="alternate" hreflang="fr" href="https://connected-mate.github.io/imessage-connector/fr/more.html">
+<link rel="alternate" hreflang="en" href="https://connected-mate.github.io/imessage-connector/more.html">
+<link rel="alternate" hreflang="x-default" href="https://connected-mate.github.io/imessage-connector/more.html">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="assets/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="iMessage Connector">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:url" content="https://connected-mate.github.io/imessage-connector/more.html">
+<meta property="og:title" content="How it works, limits, FAQ — iMessage Connector">
+<meta property="og:description" content="How iMessage Connector works: setup with your coding agent, the settings page, what it cannot do, the safety rules, and answers to common questions.">
+<meta property="og:image" content="https://connected-mate.github.io/imessage-connector/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="iMessage Connector: “Your agent texts on iMessage”, with the setup prompt to copy into your coding agent">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How it works, limits, FAQ — iMessage Connector">
+<meta name="twitter:description" content="How iMessage Connector works: setup with your coding agent, the settings page, what it cannot do, the safety rules, and answers to common questions.">
+<meta name="twitter:image" content="https://connected-mate.github.io/imessage-connector/assets/og.jpg">
+<link rel="preload" href="assets/fonts/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/archivo-black-expanded-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script>
+document.documentElement.classList.replace('no-js', 'js');
+try {
+  var pick = localStorage.getItem('imessage-connector-lang');
+  if (!pick && !/^en/i.test(navigator.language || '')) { pick = 'fr'; localStorage.setItem('imessage-connector-lang', pick); }
+  if (pick === 'fr') location.replace('fr/more.html' + location.search + location.hash);
+} catch (e) {}
+</script>
+<meta name="theme-color" content="#f2f2f2">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "iMessage Connector",
+      "item": "https://connected-mate.github.io/imessage-connector/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "How it works",
+      "item": "https://connected-mate.github.io/imessage-connector/more.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "en",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is it free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. No subscription, no account, no paid tier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is anything sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not by iMessage Connector: it has no server of its own. It runs on your Mac, opens the Messages database read-only, and its log never contains the text of your messages. What your agent does with what it reads depends on the agent you use: a cloud model receives what it is given."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who can command it from a phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only the people you allowed, in a conversation you set up for it. Anyone else’s message is just text, never an instruction, and the log says which check it failed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it reply as me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if you choose it, conversation by conversation. During setup your agent asks you, for each conversation: answer as your assistant (messages start with 🤖 and say it is your assistant) or as you (no 🤖, written the way you text). As your assistant is the default. If you pick “as me”, the people in that conversation will not see that a program wrote the message, so keep it for conversations where that is fine with you and with them. You can change it any time in the settings page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it answer on its own while I’m away?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if you switch it on for a conversation. Your Mac then runs Claude Code or Codex in that conversation’s project folder and texts the answer back, signed 🤖 or in your name, as you chose. Only the people you allowed can trigger it, and it stays quiet during quiet hours. It is off everywhere until you turn it on."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which agents does it work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any agent that speaks MCP. Claude Code, Codex, OpenCode, Kimi, Cursor, Gemini CLI, Antigravity, Copilot, Windsurf and others. The setup prompt is the same for all of them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work with SMS or RCS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It goes through the Messages app on your Mac, so it sees what Messages sees. iMessage works out of the box. SMS only if your Mac receives them through Text Message Forwarding from your iPhone. RCS has not been tested here, so no promise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which Mac and which macOS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Mac signed in to Messages, with Node 22.13 or later. Tested on macOS 26.6.2. “imsgc doctor” names anything missing on your machine."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I stop it or uninstall it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "“imsgc pause” refuses everything immediately; “imsgc resume” lifts it. To remove it entirely, ask your agent: the uninstall steps are in the same guide it used to install."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why no reactions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Apple never gave reactions a scripting interface, and driving the Messages window no longer works on recent macOS. Tools that manage it inject code into Messages and require disabling System Integrity Protection; iMessage Connector will not ask you to do that."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body class="more">
+<script>(function(h){try{if(/[?&]rm=1\b/.test(location.search)||matchMedia("(prefers-reduced-motion: reduce)").matches)return;h.classList.add("rv");window.__icRevealSafety=setTimeout(function(){h.classList.remove("rv")},4000)}catch(e){}})(document.documentElement)</script>
+<a class="skip" href="#content">Skip to content</a>
+<nav class="chrome chrome--lang" aria-label="Language"><span aria-current="true">EN</span> <a href="fr/more.html" hreflang="fr" lang="fr" data-lang="fr" aria-label="Lire en français">FR</a></nav>
+<a class="back" href="./"><span aria-hidden="true">←</span> Back</a>
+<main class="page" id="content">
+  <header class="mh" data-reveal>
+    <picture class="mh__logo"><source srcset="assets/logo-256.webp" type="image/webp"><img src="assets/logo-256.png" alt="iMessage Connector logo: a green message bubble in front of the Claude Code, Codex and Cursor app icons" width="112" height="112" decoding="async"></picture>
+    <h1 class="mh__h1"><span class="mh__a">How it works</span> <span class="mh__b">Setup, limits, FAQ</span></h1>
+    <p class="mh__lede">iMessage Connector connects Claude Code, Codex or any MCP agent to Messages on your Mac. Free. This page holds the detail the front page leaves out.</p>
+    <nav class="toc" aria-label="On this page"><ul><li><a href="#does">Uses</a></li><li><a href="#setup">Setup</a></li><li><a href="#settings">Settings</a></li><li><a href="#autoreply">Auto-reply</a></li><li><a href="#menubar">Mac app</a></li><li><a href="#cannot">Limits</a></li><li><a href="#safety">Safety</a></li><li><a href="#faq">FAQ</a></li><li><a href="#coffee">Coffee</a></li></ul></nav>
+  </header>
+  <p class="toast toast--fixed" role="status" aria-live="polite" data-toast></p>
+<section class="sec sec--does" aria-labelledby="does" data-reveal><header class="sec__head"><span class="sec__num" aria-hidden="true">01</span><h2 id="does">Three ways to use it</h2></header><ol class="uses"><li><span class="use__n" aria-hidden="true">1</span><p><strong>It tells you when it’s done.</strong> A long job finishes and your phone gets a text, not the terminal you were watching. Never during quiet hours.</p></li><li><span class="use__n" aria-hidden="true">2</span><p><strong>It takes work from your phone.</strong> Text the Mac you left at home and it does the job. Only people you allowed can give it instructions.</p></li><li><span class="use__n" aria-hidden="true">3</span><p><strong>It joins a group.</strong> Your team and the agent in one thread. Its messages start with 🤖 unless you chose otherwise.</p></li></ol>
+<figure class="film wide" data-film>
+  <div class="film__frame">
+    <video class="film__teaser" data-teaser muted loop playsinline preload="metadata" poster="assets/poster-en.jpg?v=a50151af" width="1600" height="900" aria-label="Silent preview of the film: a Mac texts an iPhone when a job is done.">
+      <source src="assets/teaser-en.mp4?v=a50151af" type="video/mp4"></video>
+    <video class="film__full" data-full controls playsinline preload="none" poster="assets/poster-en.jpg?v=a50151af" width="1600" height="900" aria-label="iMessage Connector, the film (voiced, with captions)" hidden>
+      <source src="assets/promo-en.webm?v=a50151af" type="video/webm"><source src="assets/promo-en.mp4?v=a50151af" type="video/mp4">
+      <track kind="captions" src="assets/promo-en.vtt?v=a50151af" srclang="en" label="English" default>
+      <p>Your browser cannot play this video. The transcript below says everything it shows.</p></video>
+    <button class="film__play" type="button" data-watch><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M6.5 4.2v11.6a.8.8 0 0 0 1.2.7l9.2-5.8a.8.8 0 0 0 0-1.4L7.7 3.5a.8.8 0 0 0-1.2.7Z" fill="currentColor"/></svg><span>Watch with sound</span><span class="film__len">0:41</span></button>
+    <button class="film__loop" type="button" data-loop data-pause="Pause the preview" data-play="Play the preview" aria-label="Pause the preview"><svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="4" y="3" width="2.6" height="10" rx="1" fill="currentColor"/><rect x="9.4" y="3" width="2.6" height="10" rx="1" fill="currentColor"/></svg><svg class="i-play" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M5 3.4v9.2a.7.7 0 0 0 1 .6l7.3-4.6a.7.7 0 0 0 0-1.2L6 2.8a.7.7 0 0 0-1 .6Z" fill="currentColor"/></svg></button>
+  </div>
+  <figcaption>The film has a voice-over and captions. Everything it says is in the transcript.</figcaption>
+</figure><details class="transcript"><summary>Read the transcript</summary><p>Your agent can text you now, on iMessage!</p><p>Start a big job, and walk away. The second it’s done, your agent texts you!</p><p>Out and about? Text your Mac from your phone. It does the work, and texts you back!</p><p>Drop it into a group chat. Now the whole team can ask it anything!</p><p>Setup takes one minute. Copy the prompt, paste it into your agent, and it sets everything up!</p><p>In every chat, it answers as you, or as itself. Your call!</p><p>iMessage Connector. Free and open source. Copy the prompt. Your agent does the rest!</p></details></section>
+<section class="sec sec--setup" aria-labelledby="setup" data-reveal><header class="sec__head"><span class="sec__num" aria-hidden="true">02</span><h2 id="setup" data-wave>Setup: one prompt</h2></header><p class="sec__lead">Paste it into your coding agent. It installs, asks you, and checks with you before anything is sent.</p><div class="pill pill--more" id="agent" role="group" aria-label="Copy the setup prompt">
+      <p class="pill__prompt"><code data-prompt>Install iMessage Connector on this Mac and set up my conversations. Follow https://github.com/Connected-Mate/imessage-connector/blob/main/AGENT-SETUP.md exactly, and ask me, for each conversation, whether you answer as me or as yourself. Ask me before anything sensitive and before sending any message.</code></p>
+      <hr class="pill__rule">
+      <div class="pill__row">
+        <span class="thumb" data-thumb aria-hidden="true"><picture><source srcset="assets/icons/tile/claude-code.webp" type="image/webp"><img src="assets/icons/tile/claude-code.png" alt="" width="38" height="38" decoding="async"></picture></span>
+        <div class="picker" data-picker>
+          <span class="sr-only" id="picker-label">Agent you will paste it into</span>
+          <button class="picker__btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="agents" aria-labelledby="picker-label picker-value"><span id="picker-value" data-picker-label>Claude Code</span><svg viewBox="0 0 12 12" aria-hidden="true" focusable="false"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <ul class="list" id="agents" role="listbox" tabindex="-1" aria-labelledby="picker-label" hidden><li role="option" id="ag-0" data-name="Claude Code" data-accent="#B06046" data-accent2="#BE5837" style="--i:0;--a:#B06046" aria-selected="true" class="opt"><span class="thumb" aria-hidden="true"><picture><source srcset="assets/icons/tile/claude-code.webp" type="image/webp"><img src="assets/icons/tile/claude-code.png" alt="" width="38" height="38" decoding="async"></picture></span><span class="opt__name">Claude Code</span></li><li role="option" id="ag-1" data-name="Codex" data-accent="#4C6BE7" data-accent2="#374CFF" style="--i:1;--a:#4C6BE7" aria-selected="false" class="opt"><span class="thumb" aria-hidden="true"><picture><source srcset="assets/icons/tile/codex.webp" type="image/webp"><img src="assets/icons/tile/codex.png" alt="" width="38" height="38" decoding="async"></picture></span><span class="opt__name">Codex</span></li><li role="option" id="ag-2" data-name="OpenCode" data-accent="#343432" data-accent2="#767675" style="--i:2;--a:#343432" aria-selected="false" class="opt"><span class="thumb" aria-hidden="true"><picture><source srcset="assets/icons/tile/opencode.webp" type="image/webp"><img src="assets/icons/tile/opencode.png" alt="" width="38" height="38" decoding="async"></picture></span><span class="opt__name">OpenCode</span></li><li role="option" id="ag-3" data-name="Kimi" data-accent="#2B77CF" data-accent2="#002E58" style="--i:3;--a:#2B77CF" aria-selected="false" class="opt"><span class="thumb" aria-hidden="true"><picture><source srcset="assets/icons/tile/kimi.webp" type="image/webp"><img src="assets/icons/tile/kimi.png" alt="" width="38" height="38" decoding="async"></picture></span><span class="opt__name">Kimi</span></li><li role="option" id="ag-4" data-name="Cursor" data-accent="#14120B" data-accent2="#777673" style="--i:4;--a:#14120B" aria-selected="false" class="opt"><span class="thumb" aria-hidden="true"><picture><source srcset="assets/icons/tile/cursor.webp" type="image/webp"><img src="assets/icons/tile/cursor.png" alt="" width="38" height="38" decoding="async"></picture></span><span class="opt__name">Cursor</span></li><li role="option" id="ag-5" data-name="Gemini CLI" data-accent="#2774D9" data-accent2="#7B6ABE" style="--i:5;--a:#2774D9" aria-selected="false" class="opt"><span class="thumb" aria-hidden="true"><picture><source srcset="assets/icons/tile/gemini-cli.webp" type="image/webp"><img src="assets/icons/tile/gemini-cli.png" alt="" width="38" height="38" decoding="async"></picture></span><span class="opt__name">Gemini CLI</span></li><li role="option" id="ag-6" data-name="Antigravity" data-accent="#BE573B" data-accent2="#3B76CC" style="--i:6;--a:#BE573B" aria-selected="false" class="opt"><span class="thumb" aria-hidden="true"><picture><source srcset="assets/icons/tile/antigravity.webp" type="image/webp"><img src="assets/icons/tile/antigravity.png" alt="" width="38" height="38" decoding="async"></picture></span><span class="opt__name">Antigravity</span></li><li role="option" id="ag-7" data-name="Copilot" data-accent="#2B2B2B" data-accent2="#767676" style="--i:7;--a:#2B2B2B" aria-selected="false" class="opt"><span class="thumb" aria-hidden="true"><picture><source srcset="assets/icons/tile/copilot.webp" type="image/webp"><img src="assets/icons/tile/copilot.png" alt="" width="38" height="38" decoding="async"></picture></span><span class="opt__name">Copilot</span></li><li role="option" id="ag-8" data-name="Windsurf" data-accent="#0B100F" data-accent2="#0C857A" style="--i:8;--a:#0B100F" aria-selected="false" class="opt"><span class="thumb" aria-hidden="true"><picture><source srcset="assets/icons/tile/windsurf.webp" type="image/webp"><img src="assets/icons/tile/windsurf.png" alt="" width="38" height="38" decoding="async"></picture></span><span class="opt__name">Windsurf</span></li></ul>
+        </div>
+        <span class="or">or any agent</span>
+        <span class="spacer"></span>
+        <button class="go" type="button" data-copy="Install iMessage Connector on this Mac and set up my conversations. Follow https://github.com/Connected-Mate/imessage-connector/blob/main/AGENT-SETUP.md exactly, and ask me, for each conversation, whether you answer as me or as yourself. Ask me before anything sensitive and before sending any message." data-copied="Copied — paste it into {agent}" data-manual="Selected — press {key}" data-manual-touch="Selected — tap Copy"><svg class="i-up" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><rect x="7" y="7" width="10" height="10" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.9"/><path d="M13 4.6V4.4A1.9 1.9 0 0 0 11.1 2.5H5.4A2.9 2.9 0 0 0 2.5 5.4v5.7a1.9 1.9 0 0 0 1.9 1.9h.2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><svg class="i-ok" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M4.5 10.5 8.3 14.2 15.5 6.3" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="go__label">Copy prompt</span><span class="go__ok">Copied</span></button>
+      </div>
+    </div>
+<ol class="steps"><li><span class="step__n" aria-hidden="true">1</span><p>Copy this prompt and paste it into your coding agent. It downloads and installs iMessage Connector for you.</p></li><li><span class="step__n" aria-hidden="true">2</span><p>Grant the two macOS permissions it walks you through: Full Disk Access for your terminal app, and Automation for Messages.</p></li><li><span class="step__n" aria-hidden="true">3</span><p>It opens your settings page. Choose, conversation by conversation, what the agent may do and whether it answers as you or as itself.</p></li><li><span class="step__n" aria-hidden="true">4</span><p>It asks you first, then sends one test message to your iPhone.</p></li></ol></section>
+<section class="sec sec--settings" aria-labelledby="settings" data-reveal><header class="sec__head"><span class="sec__num" aria-hidden="true">03</span><h2 id="settings">Your settings page</h2></header><p class="sec__lead">“imsgc app” opens a local page in your browser. Nothing is hosted anywhere: it reads and writes settings on your Mac. For each conversation you choose:</p><figure class="shot wide"><picture class=""><source media="(max-width: 640px)" type="image/webp" srcset="assets/more/settings-phone.webp" width="720" height="1207"><source media="(max-width: 640px)" srcset="assets/more/settings-phone.jpg" width="720" height="1207"><source media="(prefers-color-scheme: dark)" type="image/webp" srcset="assets/more/settings-dark.webp"><source media="(prefers-color-scheme: dark)" srcset="assets/more/settings-dark.jpg"><source type="image/webp" srcset="assets/more/settings-light.webp"><img src="assets/more/settings-light.jpg" alt="The iMessage Connector settings page: the Ship Room conversation set to Interactive, answered by Claude Code in a project folder, with auto-reply on" width="1440" height="1222" loading="lazy" decoding="async"></picture><figcaption>The settings page that “imsgc app” opens on your Mac (interface in English).</figcaption></figure><ul class="ticks"><li><strong>What the agent may do:</strong> off, notify, read or interactive.</li><li><strong>Who answers:</strong> Claude Code, Codex or nobody.</li><li><strong>Project folder:</strong> where the agent works for this conversation.</li><li><strong>Fixed to folder:</strong> the agent stays inside that folder.</li><li><strong>Answer on its own:</strong> auto-reply, off until you turn it on.</li></ul></section>
+<section class="sec sec--autoreply" aria-labelledby="autoreply" data-reveal><header class="sec__head"><span class="sec__num" aria-hidden="true">04</span><h2 id="autoreply">Answers on its own, as you or as itself</h2></header><p class="sec__lead">Switch on “Answer on its own” for a conversation and your Mac replies when an allowed person writes: it runs Claude Code or Codex in that conversation’s project folder and texts the answer back.</p><ul class="ruled"><li><strong>As your assistant 🤖:</strong> the default. Its messages start with 🤖 and say they come from your assistant, so whoever reads them knows it was not you.</li><li><strong>As you:</strong> no 🤖, written the way you text. The people in that conversation will not see that a program wrote it, so keep it for conversations where that is fine with everyone.</li><li><strong>Your call, per conversation:</strong> your agent asks you during setup, and you can change it any time in the settings page. Auto-reply is off everywhere until you turn it on, and quiet during quiet hours.</li></ul><div class="pair wide"><figure class="shot shot--sm"><picture class=""><source type="image/webp" srcset="assets/more/voice-agent-light.webp"><img src="assets/more/voice-agent-light.jpg" alt="Settings for the Ship Room conversation: Answers as “The agent 🤖” selected, “Me” crossed out because the policy requires the marker, Claude Code answers in ~/Projects/ship-room-bot, Answer on its own switched on" width="1116" height="699" loading="lazy" decoding="async"></picture><figcaption>As your assistant — the default. Here the policy requires the 🤖 marker, so “Me” is locked for this conversation.</figcaption></figure><figure class="shot shot--sm"><picture class=""><source type="image/webp" srcset="assets/more/voice-me-light.webp"><img src="assets/more/voice-me-light.jpg" alt="Settings for the Ship Room conversation: Answers as “Me” selected, Claude Code answers in ~/Projects/ship-room-bot, Answer on its own switched on" width="1116" height="664" loading="lazy" decoding="async"></picture><figcaption>As you: “Me” selected, auto-reply on.</figcaption></figure></div></section>
+<section class="sec sec--menubar" aria-labelledby="menubar" data-reveal><header class="sec__head"><span class="sec__num" aria-hidden="true">05</span><h2 id="menubar">On your Mac: the menu bar app</h2></header><div class="mac"><picture class="mac__logo"><source srcset="assets/logo-256.webp" type="image/webp"><img src="assets/logo-256.png" alt="" width="88" height="88" loading="lazy" decoding="async"></picture><div class="mac__text"><p>Optional. A small menu bar app shows what your agent may do and lets you pause it in one click. It is signed and notarized by Apple and opens with a double-click.</p><p class="mac__cta"><a class="btn btn--dark" href="https://github.com/Connected-Mate/imessage-connector/releases/latest/download/iMessage-Connector-macOS.dmg" download><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 3v9.2m0 0 3.6-3.6M10 12.2 6.4 8.6M4 15.5h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Download the menu bar app (.dmg)</a><span class="mac__meta">Signed and notarized by Apple</span></p><p class="sr-only" id="req-label">Requirements</p><ul class="chips" aria-labelledby="req-label"><li>macOS 14 or later</li><li>Node.js 22.13 or later</li><li>Full Disk Access for “iMessage Connector” on first launch</li></ul><p class="mac__alt">Prefer the terminal? <code>imsgc menubar install</code></p></div></div></section>
+<section class="sec sec--cannot" aria-labelledby="cannot" data-reveal><header class="sec__head"><span class="sec__num" aria-hidden="true">06</span><h2 id="cannot">What it cannot do</h2></header><p class="sec__lead">Better to know before you install. Apple gives no supported interface for these, and iMessage Connector says so instead of pretending.</p><ul class="nope"><li>React with a tapback.</li><li>Reply in a thread, to one specific message.</li><li>Pin a conversation.</li><li>Create a group, or rename one.</li><li>Add or remove members of a group.</li></ul><p class="sec__after">Tools that manage these inject code into Messages itself and require disabling System Integrity Protection. iMessage Connector stays on the interfaces Apple supports and will never ask you to do that. Reading is not affected: it is complete.</p></section>
+<section class="sec sec--safety" aria-labelledby="safety" data-reveal><header class="sec__head"><span class="sec__num" aria-hidden="true">07</span><h2 id="safety">Safety</h2></header><p class="sec__lead">Every layer of settings — yours, a project’s, a conversation’s — can only narrow what the agent may do. Nothing reopens what another layer closed, and “imsgc pause” stops everything at once.</p><ol class="ruled ruled--num"><li><span><strong>A sealed policy.</strong> A ceiling pinned by a checksum. Any change to it refuses everything, reads included, until a human at a real terminal re-seals it. The agent has no tool that writes settings.</span></li><li><span><strong>Quiet hours and rate limits.</strong> No message during the hours you set, and never more than a few per minute per conversation.</span></li><li><span><strong>Your OK for the first message.</strong> The first time the agent wants to write to a conversation, you get a draft, not a sent message. Your approval is tied to that exact text and that exact conversation.</span></li><li><span><strong>As you or as itself.</strong> For each conversation you choose: the agent answers as your assistant (messages start with 🤖, so whoever reads them knows it was not you), or in your name. As your assistant is the default.</span></li><li><span><strong>A log nobody can quietly edit.</strong> Every decision is written to a log where each line is chained to the previous one. Delete one and every line after it breaks. The text of your messages is never written there.</span></li></ol><p class="links"><a href="https://github.com/Connected-Mate/imessage-connector/blob/main/docs/THREAT-MODEL.md" rel="noopener">Threat model</a><span aria-hidden="true"> · </span><a href="https://github.com/Connected-Mate/imessage-connector/blob/main/docs/policy-cookbook.md" rel="noopener">Policy cookbook</a></p></section>
+<section class="sec sec--faq" aria-labelledby="faq" data-reveal><header class="sec__head"><span class="sec__num" aria-hidden="true">08</span><h2 id="faq">FAQ</h2></header><div class="faq"><details><summary><span>Is it free?</span><span class="faq__x" aria-hidden="true"></span></summary><div class="faq__a"><p>Yes. No subscription, no account, no paid tier.</p></div></details><details><summary><span>Is anything sent to a server?</span><span class="faq__x" aria-hidden="true"></span></summary><div class="faq__a"><p>Not by iMessage Connector: it has no server of its own. It runs on your Mac, opens the Messages database read-only, and its log never contains the text of your messages. What your agent does with what it reads depends on the agent you use: a cloud model receives what it is given.</p></div></details><details><summary><span>Who can command it from a phone?</span><span class="faq__x" aria-hidden="true"></span></summary><div class="faq__a"><p>Only the people you allowed, in a conversation you set up for it. Anyone else’s message is just text, never an instruction, and the log says which check it failed.</p></div></details><details><summary><span>Can it reply as me?</span><span class="faq__x" aria-hidden="true"></span></summary><div class="faq__a"><p>Yes, if you choose it, conversation by conversation. During setup your agent asks you, for each conversation: answer as your assistant (messages start with 🤖 and say it is your assistant) or as you (no 🤖, written the way you text). As your assistant is the default. If you pick “as me”, the people in that conversation will not see that a program wrote the message, so keep it for conversations where that is fine with you and with them. You can change it any time in the settings page.</p></div></details><details><summary><span>Can it answer on its own while I’m away?</span><span class="faq__x" aria-hidden="true"></span></summary><div class="faq__a"><p>Yes, if you switch it on for a conversation. Your Mac then runs Claude Code or Codex in that conversation’s project folder and texts the answer back, signed 🤖 or in your name, as you chose. Only the people you allowed can trigger it, and it stays quiet during quiet hours. It is off everywhere until you turn it on.</p></div></details><details><summary><span>Which agents does it work with?</span><span class="faq__x" aria-hidden="true"></span></summary><div class="faq__a"><p>Any agent that speaks MCP. Claude Code, Codex, OpenCode, Kimi, Cursor, Gemini CLI, Antigravity, Copilot, Windsurf and others. The setup prompt is the same for all of them.</p><ul class="agents" aria-label="Works with any MCP agent, including:"><li><span class="thumb"><picture><source srcset="assets/icons/tile/claude-code.webp" type="image/webp"><img src="assets/icons/tile/claude-code.png" alt="" width="38" height="38" decoding="async"></picture></span><span>Claude Code</span></li><li><span class="thumb"><picture><source srcset="assets/icons/tile/codex.webp" type="image/webp"><img src="assets/icons/tile/codex.png" alt="" width="38" height="38" decoding="async"></picture></span><span>Codex</span></li><li><span class="thumb"><picture><source srcset="assets/icons/tile/opencode.webp" type="image/webp"><img src="assets/icons/tile/opencode.png" alt="" width="38" height="38" decoding="async"></picture></span><span>OpenCode</span></li><li><span class="thumb"><picture><source srcset="assets/icons/tile/kimi.webp" type="image/webp"><img src="assets/icons/tile/kimi.png" alt="" width="38" height="38" decoding="async"></picture></span><span>Kimi</span></li><li><span class="thumb"><picture><source srcset="assets/icons/tile/cursor.webp" type="image/webp"><img src="assets/icons/tile/cursor.png" alt="" width="38" height="38" decoding="async"></picture></span><span>Cursor</span></li><li><span class="thumb"><picture><source srcset="assets/icons/tile/gemini-cli.webp" type="image/webp"><img src="assets/icons/tile/gemini-cli.png" alt="" width="38" height="38" decoding="async"></picture></span><span>Gemini CLI</span></li><li><span class="thumb"><picture><source srcset="assets/icons/tile/antigravity.webp" type="image/webp"><img src="assets/icons/tile/antigravity.png" alt="" width="38" height="38" decoding="async"></picture></span><span>Antigravity</span></li><li><span class="thumb"><picture><source srcset="assets/icons/tile/copilot.webp" type="image/webp"><img src="assets/icons/tile/copilot.png" alt="" width="38" height="38" decoding="async"></picture></span><span>Copilot</span></li><li><span class="thumb"><picture><source srcset="assets/icons/tile/windsurf.webp" type="image/webp"><img src="assets/icons/tile/windsurf.png" alt="" width="38" height="38" decoding="async"></picture></span><span>Windsurf</span></li></ul></div></details><details><summary><span>Does it work with SMS or RCS?</span><span class="faq__x" aria-hidden="true"></span></summary><div class="faq__a"><p>It goes through the Messages app on your Mac, so it sees what Messages sees. iMessage works out of the box. SMS only if your Mac receives them through Text Message Forwarding from your iPhone. RCS has not been tested here, so no promise.</p></div></details><details><summary><span>Which Mac and which macOS?</span><span class="faq__x" aria-hidden="true"></span></summary><div class="faq__a"><p>A Mac signed in to Messages, with Node 22.13 or later. Tested on macOS 26.6.2. “imsgc doctor” names anything missing on your machine.</p></div></details><details><summary><span>How do I stop it or uninstall it?</span><span class="faq__x" aria-hidden="true"></span></summary><div class="faq__a"><p>“imsgc pause” refuses everything immediately; “imsgc resume” lifts it. To remove it entirely, ask your agent: the uninstall steps are in the same guide it used to install.</p></div></details><details><summary><span>Why no reactions?</span><span class="faq__x" aria-hidden="true"></span></summary><div class="faq__a"><p>Apple never gave reactions a scripting interface, and driving the Messages window no longer works on recent macOS. Tools that manage it inject code into Messages and require disabling System Integrity Protection; iMessage Connector will not ask you to do that.</p></div></details></div><div class="faq__end" data-pile-trigger aria-hidden="true"></div></section>
+<section class="sec sec--coffee" aria-labelledby="coffee" data-reveal><header class="sec__head"><span class="sec__num" aria-hidden="true">09</span><h2 id="coffee">Buy me a coffee</h2></header><p>iMessage Connector is free and stays free: no subscription, no pro version, no account. If it saves you an evening, a coffee keeps me building. ☕</p><p class="btns"><a class="btn btn--light" href="https://revolut.me/alexcormeraie" rel="noopener"><span aria-hidden="true">☕</span> Buy a coffee</a></p></section>
+  <footer class="fine">
+    <p><a href="./">← Front page</a><span aria-hidden="true"> · </span><a href="https://connectedmate.com/en/legal/">Legal</a><span aria-hidden="true"> · </span><a href="#content">Back to top ↑</a></p>
+    <p>iMessage, Messages and the app icons shown are trademarks of their owners, used only to identify compatible tools.</p>
+  </footer>
+</main>
+<div class="pile-floor" aria-hidden="true"></div>
+<div class="pile" data-pile="assets/trail-imessage/messages-256.webp,assets/icons/tile/claude-code.webp,assets/icons/tile/codex.webp,assets/icons/tile/opencode.webp,assets/icons/tile/kimi.webp,assets/icons/tile/cursor.webp,assets/icons/tile/gemini-cli.webp,assets/icons/tile/antigravity.webp,assets/icons/tile/copilot.webp,assets/icons/tile/windsurf.webp" aria-hidden="true"></div>
+<script src="site.js" defer></script>
+<script src="more.js" defer></script>
+<script src="pile.js" defer></script>
+</body>
+</html>

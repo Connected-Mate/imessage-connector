@@ -1,0 +1,36 @@
+# iMessage Connector
+
+> Free MCP server and `imsgc` command-line tool that connect a coding agent (Claude Code, Codex, or any MCP client) to Messages on macOS. The agent can tell you when a long job is done, take instructions texted from your phone, and talk in group chats, all under a policy whose layers can only narrow permissions.
+
+Requirements: a Mac signed in to iMessage, Node 22.13 or later. macOS only. Author: Alexandre Cormeraie (https://cormeraie.fr), Connected Mate. Licence: proprietary, free to use (not open source).
+
+## What it does
+- Notifies you by iMessage when a long task finishes (quiet hours respected).
+- Lets you text the Mac from your phone; only numbers you allowed can give instructions.
+- Lets the agent read, search and send messages, and post in a group chat with humans.
+- Policy layers only narrow: a file the agent writes can never grant it more rights. Message bodies are never written to the audit log. Agent messages start with a robot marker by default, and the first message to a conversation waits for your approval.
+- Auto-reply, per conversation and off by default: text a switched-on conversation and the Mac runs Claude Code or Codex in that conversation's project folder (read-only tools, no shell commands) and texts the answer back. Only senders on your commander list can trigger it (`imsgc daemon`, or `imsgc daemon install` as a background service).
+- As you or as itself: for each conversation the person chooses whether the agent answers as their assistant (messages start with 🤖, the default) or in their name (`speak_as = "me"`); the setup guide makes the agent ask.
+- `imsgc app` opens a local settings page (this Mac only, while it runs): per conversation, what the agent may do, which agent answers, which folder, fixed or not, auto-reply on or off.
+- Install today is from source (the npm package is not published yet); the agent setup guide handles it.
+- `imsgc pause` refuses everything at once; `imsgc resume` restarts; `imsgc doctor` diagnoses setup.
+
+## What it cannot do
+- Run on Windows, Linux or Android, or without a Mac signed in to iMessage.
+- Create, rename or manage groups, pin conversations, reply in-thread, or react with tapbacks (reactions do not work on macOS 26 and later): no supported macOS interface exists (see README, "what this cannot do"). It stays on supported interfaces and does not inject into Messages.app.
+- It has no server of its own; what your agent does with the messages it reads depends on the agent you use.
+- Until the macOS Automation dialog is answered, send calls block and the tool looks hung; `imsgc doctor` names this case.
+
+## Set it up with your agent
+Paste this to your coding agent: "Install iMessage Connector on this Mac and set up my conversations. Follow https://github.com/Connected-Mate/imessage-connector/blob/main/AGENT-SETUP.md exactly, and ask me, for each conversation, whether you answer as me or as yourself. Ask me before anything sensitive and before sending any message."
+
+## Links
+- [Agent setup instructions](https://github.com/Connected-Mate/imessage-connector/blob/main/AGENT-SETUP.md)
+- [README](https://github.com/Connected-Mate/imessage-connector/blob/main/README.md)
+- [Threat model](https://connected-mate.github.io/imessage-connector/THREAT-MODEL.md)
+- [Policy cookbook](https://connected-mate.github.io/imessage-connector/policy-cookbook.md)
+- [Source code](https://github.com/Connected-Mate/imessage-connector)
+- [Website (English)](https://connected-mate.github.io/imessage-connector/)
+- [Site (Français)](https://connected-mate.github.io/imessage-connector/fr/)
+- [How it works, limits, FAQ (English)](https://connected-mate.github.io/imessage-connector/more.html)
+- [Comment ça marche, limites, FAQ (Français)](https://connected-mate.github.io/imessage-connector/fr/more.html)
